@@ -1,0 +1,17 @@
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.single {
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+}
+
+.empty {
+  color: gray;
+}
