@@ -8,7 +8,7 @@ function ShowProducts(props) {
   const addToCart = props.addToCart;
 
   const searchItem = props.searchItem;
-  console.log(searchItem);
+
   return (
     <div className="grid">
       {searchItem.map((product) => {

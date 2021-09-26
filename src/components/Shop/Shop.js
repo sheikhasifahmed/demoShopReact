@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import { addToLocalStorage } from "../../utility/addToLocalStorage/addToLocalStorage";
 import getCartFromLS from "../../utility/getCartFromLS/getCartFromLS";
 import Cart from "../Cart/Cart";
@@ -11,7 +11,7 @@ const Shop = (props) => {
 
   const products = props.products;
   const searchItem = props.searchItem;
-  console.log("search item", searchItem);
+
   useEffect(() => {
     if (products.length) {
       let cartArr = getCartFromLS(products);
@@ -21,8 +21,8 @@ const Shop = (props) => {
   }, [products]);
 
   const addToCart = (pd) => {
-    if (cartItem.some((p) => p.id == pd.id)) {
-      let repPd = cartItem.find((p) => p.id == pd.id);
+    if (cartItem.some((p) => p.id === pd.id)) {
+      let repPd = cartItem.find((p) => p.id === pd.id);
       repPd.quantity++;
       let ct = [...cartItem];
       setCartItem(ct);

@@ -6,7 +6,7 @@ function getCartFromLS(products) {
   let cartObj = JSON.parse(cartStr);
   let ct = [];
   for (let key in cartObj) {
-    let cp = products.find((pd) => pd.id == key);
+    let cp = products.find((pd) => pd.id === parseFloat(key));
     cp.quantity = cartObj[key];
     ct.push(cp);
   }
